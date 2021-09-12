@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+class Main
+{
+    public static void main(String arg [])
+    {
+        Scanner sc=new Scanner(System.in);
+        int usernumber;
+        int mynumber=(int)(Math.random()*100);
+        do {
+            System.out.println("Guess My Number (1-100) :");
+            usernumber=sc.nextInt();
+            if (mynumber == usernumber)
+            {
+                System.out.println("Waaaooooo Your Number is correct :"+usernumber);
+                break;
+
+            }
+            else if (usernumber > mynumber)
+            {
+                System.out.println("Your Number is too Large :"+usernumber);
+
+            }
+            else
+            {
+                System.out.println("Your number is too Small :"+usernumber);
+            }
+        }while (usernumber >= 0);
+    }
+}
+
+
+
+
+
+
+
+                              Output:
+
+Guess My Number (1-100) :
+99
+Your Number is too Large :99
+Guess My Number (1-100) :
+80
+Your Number is too Large :80
+Guess My Number (1-100) :
+66
+Your Number is too Large :66
+Guess My Number (1-100) :
+33
+Your number is too Small :33
+Guess My Number (1-100) :
+50
+Your number is too Small :50
+Guess My Number (1-100) :
+55
+Your number is too Small :55
+Guess My Number (1-100) :
+59
+Waaaooooo Your Number is correct :59
+
+Process finished with exit code 0
